@@ -1,0 +1,30 @@
+services:
+  init-db:
+    image: postgres:16-alpine
+    container_name: iot-init-db
+    restart: "no"
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./sql:/sql:ro
+      - ./scripts/init_db.sh:/scripts/init_db.sh:ro
+    command: ["/bin/sh", "/scripts/init_db.sh"]
+  seed-db:
+    image: postgres:16-alpine
+    container_name: iot-seed-db
+    restart: "no"
+    profiles: ["tools"]
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./sql:/sql:ro
+      - ./scripts/seed_db.sh:/scripts/seed_db.sh:ro
+    command: ["/bin/sh", "/scripts/seed_db.sh"]
+  api:
+    build: .
+    container_name: iot-api
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./.env:/app/.env:ro
+    depends_on:
+      init-db:
+        condition: service_completed_successfully

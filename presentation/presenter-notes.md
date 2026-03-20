@@ -63,7 +63,7 @@ If your group has more than four members, split slide 8 or slide 9 into two spea
 
 ### Slide 8 - Demo Story and Analytics
 
-- Use the `GH-A-001` example to explain the full journey of a reading.
+- Use the `LAG-ENV-001` example to explain the full journey of a reading.
 - Explain how anomaly detection works:
   - threshold breach
   - sudden spike

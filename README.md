@@ -46,7 +46,7 @@ Open:
 
 ## Example API calls
 ```bash
-curl -X POST http://localhost:8002/api/readings   -H "Content-Type: application/json"   -d '{"sensor_code":"GH-A-001","recorded_at":"2026-03-18T12:30:00Z","temperature":31.4,"humidity":67.5}'
+curl -X POST http://localhost:8002/api/readings   -H "Content-Type: application/json"   -d '{"sensor_code":"LAG-ENV-001","recorded_at":"2026-03-18T12:30:00Z","temperature":31.4,"humidity":67.5}'
 ```
 
 ```bash

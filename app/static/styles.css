@@ -15,7 +15,9 @@ table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 label { display: flex; flex-direction: column; gap: 6px; color: var(--muted); }
-input { background: var(--soft); border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 12px; }
+input, select { background: var(--soft); border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 12px; }
+select { appearance: none; }
+.form-grid button { grid-column: 1 / -1; width: fit-content; }
 pre { background: #020617; border: 1px solid var(--border); border-radius: 12px; padding: 12px; white-space: pre-wrap; }
 .badge-bad { color: var(--bad); font-weight: 700; }
 @media (max-width: 1024px) { .cards, .split, .form-grid { grid-template-columns: 1fr 1fr; } }

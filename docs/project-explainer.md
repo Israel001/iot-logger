@@ -47,9 +47,9 @@ This table stores the places where sensors are installed.
 
 Examples from the sample data:
 
-- Greenhouse A
-- Warehouse 1
-- Clinic Ward
+- Lagos Produce Hub
+- Kano Storage Depot
+- Enugu Health Centre
 
 Each location can include a name, description, latitude, longitude, and creation timestamp.
 
@@ -111,7 +111,7 @@ Its job is to:
 3. insert the new reading into `sensor_readings`
 4. return the inserted reading ID
 
-This is helpful because the API can work with a human-friendly sensor code like `GH-A-001` instead of forcing the user to know the database primary key.
+This is helpful because the API can work with a human-friendly sensor code like `LAG-ENV-001` instead of forcing the user to know the database primary key.
 
 ### 3. FastAPI backend
 
@@ -271,15 +271,15 @@ So when you use this project, think of it as "the data platform and application 
 
 ## Example walkthrough
 
-Here is a simple example using the seeded sensor code `GH-A-001`.
+Here is a simple example using the seeded sensor code `LAG-ENV-001`.
 
-1. `GH-A-001` represents a sensor installed at **Greenhouse A**.
+1. `LAG-ENV-001` represents a sensor installed at **Lagos Produce Hub**.
 2. The sensor has temperature and humidity thresholds stored in the `sensors` table.
 3. A reading is submitted, for example:
 
 ```json
 {
-  "sensor_code": "GH-A-001",
+  "sensor_code": "LAG-ENV-001",
   "recorded_at": "2026-03-18T12:30:00Z",
   "temperature": 31.4,
   "humidity": 67.5
@@ -287,7 +287,7 @@ Here is a simple example using the seeded sensor code `GH-A-001`.
 ```
 
 4. The backend receives this request through `POST /api/readings`.
-5. PostgreSQL uses `insert_sensor_reading` to look up `GH-A-001` and insert the new row into `sensor_readings`.
+5. PostgreSQL uses `insert_sensor_reading` to look up `LAG-ENV-001` and insert the new row into `sensor_readings`.
 6. Later, if a report is requested:
    - `/api/reports/daily-averages` includes the reading in that day's averages
    - `/api/reports/anomalies` checks whether the reading breaks thresholds or shows a sudden spike

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560">
+<rect width="1600" height="560" fill="#0F172A"/>
+<rect x="40" y="30" width="1520" height="500" rx="22" fill="#111827" stroke="#334155" stroke-width="1"/>
+<text x="72" y="78" fill="#E5E7EB" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="start">Insert new sensor reading</text>
+<text x="72" y="108" fill="#94A3B8" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="400" text-anchor="start">This form sends a POST request to /api/readings and refreshes the dashboard.</text>
+<text x="72" y="150" fill="#94A3B8" font-size="16" font-family="Arial, Helvetica, sans-serif" font-weight="600" text-anchor="start">Sensor code</text>
+<rect x="72" y="166" width="328" height="56" rx="22" fill="#1F2937" stroke="#334155" stroke-width="1"/>
+<text x="90" y="202" fill="#E5E7EB" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="start">LAG-ENV-001</text>
+<text x="424" y="150" fill="#94A3B8" font-size="16" font-family="Arial, Helvetica, sans-serif" font-weight="600" text-anchor="start">Timestamp (ISO)</text>
+<rect x="424" y="166" width="472" height="56" rx="22" fill="#1F2937" stroke="#334155" stroke-width="1"/>
+<text x="442" y="202" fill="#E5E7EB" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="start">2026-03-18T12:30:00Z</text>
+<text x="72" y="272" fill="#94A3B8" font-size="16" font-family="Arial, Helvetica, sans-serif" font-weight="600" text-anchor="start">Temperature</text>
+<rect x="72" y="288" width="328" height="56" rx="22" fill="#1F2937" stroke="#334155" stroke-width="1"/>
+<text x="90" y="324" fill="#E5E7EB" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="start">31.40</text>
+<text x="424" y="272" fill="#94A3B8" font-size="16" font-family="Arial, Helvetica, sans-serif" font-weight="600" text-anchor="start">Humidity</text>
+<rect x="424" y="288" width="328" height="56" rx="22" fill="#1F2937" stroke="#334155" stroke-width="1"/>
+<text x="442" y="324" fill="#E5E7EB" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="start">67.50</text>
+<rect x="72" y="394" width="188" height="48" rx="14" fill="#2563EB"/>
+<text x="166" y="424" fill="#FFFFFF" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">Submit reading</text>
+<text x="924" y="152" fill="#94A3B8" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="start">Result preview</text>
+<rect x="924" y="168" width="572" height="256" rx="22" fill="#020617" stroke="#334155" stroke-width="1"/>
+<text x="948" y="212" fill="#E5E7EB" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">{</text>
+<text x="948" y="238" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;id&quot;: 224,</text>
+<text x="948" y="264" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;recorded_at&quot;: &quot;2026-03-18T12:30:00Z&quot;,</text>
+<text x="948" y="290" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;temperature&quot;: 31.4,</text>
+<text x="948" y="316" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;humidity&quot;: 67.5,</text>
+<text x="948" y="342" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;sensor_code&quot;: &quot;LAG-ENV-001&quot;,</text>
+<text x="948" y="368" fill="#38BDF8" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">  &quot;location_name&quot;: &quot;Lagos Produce Hub&quot;</text>
+<text x="948" y="394" fill="#E5E7EB" font-size="18" font-family="Courier New, monospace" font-weight="500" text-anchor="start">}</text>
+<text x="72" y="484" fill="#94A3B8" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="400" text-anchor="start">The dashboard also refreshes the cards, recent readings, anomalies, and daily averages after a successful insert.</text>
+</svg>

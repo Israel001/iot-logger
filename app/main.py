@@ -15,13 +15,30 @@ BASE_DIR = Path(__file__).resolve().parent
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
+
+def get_static_version() -> str:
+    static_files = (
+        BASE_DIR / "static" / "styles.css",
+        BASE_DIR / "static" / "app.js",
+    )
+    latest_change = max(path.stat().st_mtime_ns for path in static_files)
+    return str(latest_change)
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
 @app.get("/", response_class=HTMLResponse)
 def dashboard(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    response = templates.TemplateResponse(
+        "index.html",
+        {
+            "request": request,
+            "static_version": get_static_version(),
+        },
+    )
+    response.headers["Cache-Control"] = "no-store"
+    return response
 
 @app.get("/api/locations")
 def list_locations() -> list[dict[str, Any]]:

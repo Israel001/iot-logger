@@ -22,7 +22,7 @@ services:
     build: .
     container_name: iot-api
     ports:
-      - "8002:8000"
+      - "8009:8000"
     volumes:
       - ./.env:/app/.env:ro
     depends_on:

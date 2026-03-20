@@ -15,6 +15,7 @@ def get_conn():
         dbname=settings.db_name,
         user=settings.db_user,
         password=settings.db_password,
+        connect_timeout=settings.db_connect_timeout,
         row_factory=dict_row,
     )
     try:
